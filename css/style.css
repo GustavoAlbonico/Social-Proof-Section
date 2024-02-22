@@ -1,0 +1,120 @@
+/* <style>
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+</style> */
+
+/* Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%);
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%) */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.container main {
+  max-width: 1100px;
+  margin: 5rem auto;
+}
+
+.sub-container {
+  display: flex;
+}
+
+.info {
+  flex: 1 1 0;
+}
+
+.info h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 60px;
+}
+
+.info p {
+  color: hsl(303, 10%, 53%);
+  font-size: 18px;
+  margin: 2rem 0;
+  line-height: 1.5rem;
+  
+}
+
+.card-note-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0 2rem 8rem;
+  flex: 1.5 1 0;
+}
+
+#card-note-container-one {
+ align-self: start;
+}
+
+#card-note-container-two {
+ align-self: center;
+}
+
+#card-note-container-three {
+  align-self: end;
+}
+.card-note {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 0.5rem;
+  min-width: 430px;
+}
+
+.card-note h3 {
+  color: hsl(300, 43%, 22%);
+  font-size: 17px;
+}
+
+.list-stars {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+/* -------------------- */
+
+.cards-comment-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.card-comment-container{
+  height: 350px;
+}
+
+.card-comment {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+}
+
+.card-comment header {
+  display: flex;
+  align-items: top;
+  gap: 1.5rem;
+}
+
+.card-comment header img {
+  width: 50px;
+  border-radius: 2rem;
+}
