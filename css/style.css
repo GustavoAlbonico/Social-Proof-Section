@@ -6,11 +6,17 @@
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
 }
+
 main {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("/images/bg-pattern-top-desktop.svg"),
+                    url("/images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+
 }
 
 .container {
@@ -18,26 +24,17 @@ main {
   flex-direction: column;
   gap: 2.5rem;
   max-width: 80%;
-  /* margin-top: 2rem; */
-  /* border: 1px solid red; */
 }
 
 .sub-container {
   margin-top: 1.5rem;
   display: flex;
-  gap: 13rem;
-
-  /* display: grid;
-  grid-template-columns: repeat(12,1fr); */
+  gap: 12rem;
 }
 
 .info {
   flex: 1 1 0;
-  /* grid-area: 1/1/1/span 5;
-  width: 90%; */
 }
-
-
 
 .info h1 {
   max-width: 80%;
@@ -57,8 +54,6 @@ main {
 
 .card-note-section {
   flex: 1.2 1 0;
-  /* margin-left: auto; */
-  /* grid-area: 1/7/1/span 12; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,19 +71,20 @@ main {
 #card-note-container-three {
   align-self: end;
 }
+
 .card-note {
   display: flex;
   align-items: center;
-  text-align: center;
-  padding: 14px 25px 14px 20px;
+  gap: 1rem;
+  padding: 14px 40px 14px 25px;
   background-color: hsl(300, 24%, 96%);
   border-radius: 0.5rem;
-  /* min-width: 380px; */
+  min-width: 400px;
 }
 
 .card-note h3 {
   color: hsl(300, 43%, 22%);
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .list-stars {
@@ -97,12 +93,9 @@ main {
   gap: 4px;
 }
 
-/*  */
-
-
 .cards-comment-section {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .card-comment-container{
@@ -121,20 +114,19 @@ main {
 .card-comment {
   background-color: hsl(300, 43%, 22%);
   border-radius: 0.5rem;
-  padding: 2rem ;
-  max-width: 350px;
+  padding: 2rem 2.3rem;
+  max-width: 365px;
   max-height: 200px;
-
 }
 
 .card-comment header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card-comment blockquote{
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 25px;
   line-height: 18px;
 }
@@ -155,10 +147,89 @@ main {
 
 .title-card h2,
 .title-card mark{
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .title-card mark {
   background-color: transparent;
   color: hsl(333, 80%, 67%);
+}
+
+
+
+@media (max-width: 375px){
+  
+  main {
+    background-image: url("/images/bg-pattern-top-mobile.svg"),
+                      url("/images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+  }
+
+  .container {
+    max-width: 85%;
+    margin: 6rem 0;
+  }
+
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .info h1,
+  .info p {
+    text-align: center;
+  }
+
+  .info h1 {
+    max-width: none;
+    font-size: 45px;
+  }
+  
+  .info p {
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+
+  #card-note-container-one, 
+  #card-note-container-two,
+  #card-note-container-three {
+    align-self: center;
+    min-width: 100%;
+  }
+
+  .card-note {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: max-content;
+    padding: 15px 0;
+  }
+
+  .list-stars {
+    gap: 0.5rem;
+  }
+
+  .card-comment-container{
+    height: auto;
+  }
+
+  .cards-comment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card-comment {
+    max-height: none;
+  }
+
+  .card-comment blockquote{
+    font-size: 1rem;
+    margin-top: 25px;
+    line-height: 20px;
+  }
 }
