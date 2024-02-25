@@ -1,4 +1,4 @@
-https://gustavoalbonico.github.io/Social-Proof-Section/
+https://gustavoalbonico.github.io/Social-Proof-Section/ 1440px/375px
 # Frontend Mentor - Social proof section
 
 ![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
